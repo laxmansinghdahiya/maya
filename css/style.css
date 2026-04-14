@@ -270,12 +270,17 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: float 12s ease-in-out infinite;
+    animation: float-center 12s ease-in-out infinite;
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0) scale(1); }
     50% { transform: translateY(-30px) scale(1.05); }
+}
+
+@keyframes float-center {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, calc(-50% - 30px)) scale(1.05); }
 }
 
 .hero-content {
