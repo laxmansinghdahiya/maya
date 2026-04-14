@@ -1,0 +1,10 @@
+title: Maya
+description: >-
+  Beautiful best look, logo ko apni aur attract karna
+baseurl: ""
+url: "https://laxmansinghdahiya.github.io"
+
+theme: minima
+
+plugins:
+  - jekyll-feed
