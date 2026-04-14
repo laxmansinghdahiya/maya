@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ब्लॉग — Maya Blog</title>
+    <meta name="description" content="Maya Blog के सभी आर्टिकल्स पढ़ें">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✦</span> Maya
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">होम</a></li>
+                <li><a href="blog.html" class="active">ब्लॉग</a></li>
+                <li><a href="about.html">हमारे बारे में</a></li>
+                <li><a href="contact.html">संपर्क</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1><span class="gradient-text">ब्लॉग</span></h1>
+            <p>हमारे सभी आर्टिकल्स एक जगह पर</p>
+        </div>
+    </header>
+
+    <!-- Category Filter -->
+    <div class="container">
+        <div class="category-filter">
+            <button class="filter-btn active" onclick="filterPosts('all')">सभी</button>
+            <button class="filter-btn" onclick="filterPosts('inspiration')">प्रेरणा</button>
+            <button class="filter-btn" onclick="filterPosts('tech')">टेक्नोलॉजी</button>
+            <button class="filter-btn" onclick="filterPosts('health')">स्वास्थ्य</button>
+            <button class="filter-btn" onclick="filterPosts('education')">शिक्षा</button>
+            <button class="filter-btn" onclick="filterPosts('travel')">यात्रा</button>
+            <button class="filter-btn" onclick="filterPosts('coding')">कोडिंग</button>
+            <button class="filter-btn" onclick="filterPosts('books')">किताबें</button>
+            <button class="filter-btn" onclick="filterPosts('food')">खाना</button>
+        </div>
+    </div>
+
+    <!-- Blog Posts -->
+    <section class="section">
+        <div class="container">
+            <div class="posts-grid">
+                <article class="post-card" data-category="inspiration">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=250&fit=crop" alt="Success" loading="lazy">
+                        <span class="card-category">प्रेरणा</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 14 अप्रैल 2026</span>
+                            <span class="card-read">⏱ 5 मिनट</span>
+                        </div>
+                        <h3 class="card-title">जीवन में सफलता पाने के 10 मंत्र</h3>
+                        <p class="card-excerpt">सफलता कोई मंजिल नहीं, बल्कि एक यात्रा है। आइए जानते हैं वो 10 महत्वपूर्ण बातें...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="tech">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="AI" loading="lazy">
+                        <span class="card-category">टेक्नोलॉजी</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 12 अप्रैल 2026</span>
+                            <span class="card-read">⏱ 6 मिनट</span>
+                        </div>
+                        <h3 class="card-title">AI का भविष्य: क्या बदलेगा?</h3>
+                        <p class="card-excerpt">आर्टिफिशियल इंटेलिजेंस तेजी से हमारी दुनिया बदल रहा है। जानिए आगे क्या होगा...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="health">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" alt="Yoga" loading="lazy">
+                        <span class="card-category">स्वास्थ्य</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 10 अप्रैल 2026</span>
+                            <span class="card-read">⏱ 4 मिनट</span>
+                        </div>
+                        <h3 class="card-title">योग से बदलें अपनी जिंदगी</h3>
+                        <p class="card-excerpt">योग न सिर्फ शरीर बल्कि मन को भी स्वस्थ रखता है। शुरुआत करने के टिप्स...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="education">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=400&h=250&fit=crop" alt="Writing" loading="lazy">
+                        <span class="card-category">लेखन</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 8 अप्रैल 2026</span>
+                            <span class="card-read">⏱ 4 मिनट</span>
+                        </div>
+                        <h3 class="card-title">अच्छा लेखक कैसे बनें?</h3>
+                        <p class="card-excerpt">लेखन एक कला है जिसे अभ्यास और समर्पण से निखारा जा सकता है...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="education">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop" alt="Education" loading="lazy">
+                        <span class="card-category">शिक्षा</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 6 अप्रैल 2026</span>
+                            <span class="card-read">⏱ 6 मिनट</span>
+                        </div>
+                        <h3 class="card-title">ऑनलाइन शिक्षा का नया युग</h3>
+                        <p class="card-excerpt">डिजिटल क्रांति ने शिक्षा के क्षेत्र में अभूतपूर्व बदलाव लाए हैं...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="travel">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop" alt="Travel" loading="lazy">
+                        <span class="card-category">यात्रा</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 4 अप्रैल 2026</span>
+                            <span class="card-read">⏱ 7 मिनट</span>
+                        </div>
+                        <h3 class="card-title">भारत के 5 छुपे हुए खूबसूरत स्थान</h3>
+                        <p class="card-excerpt">भारत में कई ऐसी जगहें हैं जो अभी भी पर्यटकों की नज़रों से छुपी हैं...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="coding">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop" alt="Coding" loading="lazy">
+                        <span class="card-category">कोडिंग</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 2 अप्रैल 2026</span>
+                            <span class="card-read">⏱ 8 मिनट</span>
+                        </div>
+                        <h3 class="card-title">प्रोग्रामिंग सीखने की शुरुआत कैसे करें</h3>
+                        <p class="card-excerpt">अगर आप प्रोग्रामिंग सीखना चाहते हैं तो ये गाइड आपके लिए है...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="books">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=250&fit=crop" alt="Books" loading="lazy">
+                        <span class="card-category">किताबें</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 1 अप्रैल 2026</span>
+                            <span class="card-read">⏱ 5 मिनट</span>
+                        </div>
+                        <h3 class="card-title">2026 की बेस्ट हिंदी किताबें</h3>
+                        <p class="card-excerpt">इस साल आई कुछ बेहतरीन हिंदी किताबों की सूची जो जरूर पढ़नी चाहिए...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="food">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=400&h=250&fit=crop" alt="Food" loading="lazy">
+                        <span class="card-category">खाना</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 30 मार्च 2026</span>
+                            <span class="card-read">⏱ 3 मिनट</span>
+                        </div>
+                        <h3 class="card-title">हेल्दी इंडियन रेसिपीज़</h3>
+                        <p class="card-excerpt">स्वादिष्ट और स्वस्थ भारतीय व्यंजन जो बनाने में आसान हैं...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="inspiration">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=250&fit=crop" alt="Motivation" loading="lazy">
+                        <span class="card-category">प्रेरणा</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 28 मार्च 2026</span>
+                            <span class="card-read">⏱ 5 मिनट</span>
+                        </div>
+                        <h3 class="card-title">सकारात्मक सोच की शक्ति</h3>
+                        <p class="card-excerpt">सकारात्मक सोच आपकी जिंदगी को बदल सकती है। जानिए कैसे...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="tech">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop" alt="Web Dev" loading="lazy">
+                        <span class="card-category">टेक्नोलॉजी</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 26 मार्च 2026</span>
+                            <span class="card-read">⏱ 7 मिनट</span>
+                        </div>
+                        <h3 class="card-title">वेब डेवलपमेंट 2026: ट्रेंड्स</h3>
+                        <p class="card-excerpt">2026 में वेब डेवलपमेंट में कौन से नए ट्रेंड्स आ रहे हैं...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-category="health">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="Fitness" loading="lazy">
+                        <span class="card-category">स्वास्थ्य</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">📅 24 मार्च 2026</span>
+                            <span class="card-read">⏱ 4 मिनट</span>
+                        </div>
+                        <h3 class="card-title">घर पर फिटनेस: आसान एक्सरसाइज</h3>
+                        <p class="card-excerpt">जिम जाने की जरूरत नहीं! ये एक्सरसाइज घर पर आसानी से करें...</p>
+                        <a href="post.html" class="card-link">पूरा पढ़ें →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <span class="section-badge">📧 न्यूज़लेटर</span>
+                    <h2 class="newsletter-title">नई पोस्ट सीधे अपने इनबॉक्स में पाएं</h2>
+                    <p class="newsletter-desc">हमारे न्यूज़लेटर को सब्सक्राइब करें।</p>
+                    <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                        <input type="email" placeholder="आपका ईमेल पता" required>
+                        <button type="submit" class="btn btn-primary">सब्सक्राइब</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">✦</span> Maya
+                    </a>
+                    <p>Maya Blog — विचारों और ज्ञान को साझा करने का एक सुंदर मंच।</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">▶</a>
+                        <a href="#" aria-label="GitHub">⌨</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>क्विक लिंक्स</h4>
+                    <ul>
+                        <li><a href="index.html">होम</a></li>
+                        <li><a href="blog.html">ब्लॉग</a></li>
+                        <li><a href="about.html">हमारे बारे में</a></li>
+                        <li><a href="contact.html">संपर्क</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>कैटेगरी</h4>
+                    <ul>
+                        <li><a href="blog.html">टेक्नोलॉजी</a></li>
+                        <li><a href="blog.html">प्रेरणा</a></li>
+                        <li><a href="blog.html">शिक्षा</a></li>
+                        <li><a href="blog.html">यात्रा</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>संपर्क</h4>
+                    <ul>
+                        <li>📧 contact@mayablog.com</li>
+                        <li>📱 +91 98765 43210</li>
+                        <li>📍 भारत</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maya Blog. सर्वाधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <script src="js/main.js"></script>
+</body>
+</html>
