@@ -62,6 +62,7 @@ export default function Navbar() {
               <>
                 <a href="#features" className="block text-dark-300 hover:text-white text-sm" onClick={() => setMobileOpen(false)}>Features</a>
                 <a href="#pricing" className="block text-dark-300 hover:text-white text-sm" onClick={() => setMobileOpen(false)}>Pricing</a>
+                <a href="#testimonials" className="block text-dark-300 hover:text-white text-sm" onClick={() => setMobileOpen(false)}>Testimonials</a>
                 <Link to="/login" className="block text-dark-300 hover:text-white text-sm" onClick={() => setMobileOpen(false)}>Log in</Link>
                 <Link to="/signup" className="block bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center" onClick={() => setMobileOpen(false)}>
                   Get Started Free
