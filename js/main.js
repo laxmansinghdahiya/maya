@@ -133,7 +133,7 @@ function handleContact(event) {
 }
 
 // ===== Category Filter =====
-function filterPosts(category) {
+function filterPosts(category, event) {
     const buttons = document.querySelectorAll('.filter-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
