@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संपर्क — Maya Blog</title>
+    <meta name="description" content="Maya Blog से संपर्क करें">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✦</span> Maya
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">होम</a></li>
+                <li><a href="blog.html">ब्लॉग</a></li>
+                <li><a href="about.html">हमारे बारे में</a></li>
+                <li><a href="contact.html" class="active">संपर्क</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1><span class="gradient-text">संपर्क करें</span></h1>
+            <p>हमसे जुड़ें, हम आपकी मदद के लिए हमेशा तैयार हैं</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>हमसे <span class="gradient-text">बात करें</span></h2>
+                    <p>कोई सवाल, सुझाव या फीडबैक? हमें लिखें, हम जल्द से जल्द जवाब देंगे।</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>ईमेल</h4>
+                            <p>contact@mayablog.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>फ़ोन</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>पता</h4>
+                            <p>नई दिल्ली, भारत</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <h4>कार्य समय</h4>
+                            <p>सोमवार - शनिवार: सुबह 9 बजे - शाम 6 बजे</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <h4 style="margin-bottom: 12px;">सोशल मीडिया पर जुड़ें</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter">𝕏</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="YouTube">▶</a>
+                            <a href="#" aria-label="GitHub">⌨</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleContact(event)">
+                    <h3 style="margin-bottom: 24px; font-size: 1.3rem;">संदेश भेजें</h3>
+                    <div class="form-group">
+                        <label for="name">आपका नाम</label>
+                        <input type="text" id="name" placeholder="अपना नाम लिखें" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">ईमेल पता</label>
+                        <input type="email" id="email" placeholder="आपका ईमेल" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">विषय</label>
+                        <input type="text" id="subject" placeholder="संदेश का विषय">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">संदेश</label>
+                        <textarea id="message" placeholder="अपना संदेश यहाँ लिखें..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">संदेश भेजें</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <section style="background: var(--bg-secondary); padding: 60px 0;">
+        <div class="container">
+            <div style="background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); padding: 80px; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 16px;">🗺️</div>
+                <h3 style="margin-bottom: 8px;">हमारा स्थान</h3>
+                <p style="color: var(--text-light);">नई दिल्ली, भारत</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">❓ FAQ</span>
+                <h2 class="section-title">अक्सर पूछे जाने वाले सवाल</h2>
+            </div>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px 24px; margin-bottom: 16px;">
+                    <h4 style="margin-bottom: 8px;">क्या मैं Maya Blog पर अपना आर्टिकल प्रकाशित कर सकता हूँ?</h4>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">हाँ, बिल्कुल! हमें contact@mayablog.com पर अपना आर्टिकल भेजें। हमारी टीम इसे रिव्यू करके प्रकाशित करेगी।</p>
+                </div>
+                <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px 24px; margin-bottom: 16px;">
+                    <h4 style="margin-bottom: 8px;">न्यूज़लेटर कितनी बार आता है?</h4>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">हमारा न्यूज़लेटर हर हफ्ते एक बार भेजा जाता है, जिसमें उस हफ्ते के बेस्ट आर्टिकल्स शामिल होते हैं।</p>
+                </div>
+                <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px 24px; margin-bottom: 16px;">
+                    <h4 style="margin-bottom: 8px;">क्या ये सब मुफ्त है?</h4>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">हाँ, Maya Blog पर सभी आर्टिकल्स पूरी तरह से मुफ्त हैं। पढ़ें, सीखें और शेयर करें!</p>
+                </div>
+                <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px 24px;">
+                    <h4 style="margin-bottom: 8px;">संपर्क करने का सबसे अच्छा तरीका क्या है?</h4>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">ईमेल सबसे तेज़ तरीका है। आप ऊपर दिए गए फ़ॉर्म से भी हमें मैसेज भेज सकते हैं।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">✦</span> Maya
+                    </a>
+                    <p>Maya Blog — विचारों और ज्ञान को साझा करने का एक सुंदर मंच।</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">▶</a>
+                        <a href="#" aria-label="GitHub">⌨</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>क्विक लिंक्स</h4>
+                    <ul>
+                        <li><a href="index.html">होम</a></li>
+                        <li><a href="blog.html">ब्लॉग</a></li>
+                        <li><a href="about.html">हमारे बारे में</a></li>
+                        <li><a href="contact.html">संपर्क</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>कैटेगरी</h4>
+                    <ul>
+                        <li><a href="blog.html">टेक्नोलॉजी</a></li>
+                        <li><a href="blog.html">प्रेरणा</a></li>
+                        <li><a href="blog.html">शिक्षा</a></li>
+                        <li><a href="blog.html">यात्रा</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>संपर्क</h4>
+                    <ul>
+                        <li>📧 contact@mayablog.com</li>
+                        <li>📱 +91 98765 43210</li>
+                        <li>📍 भारत</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maya Blog. सर्वाधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <script src="js/main.js"></script>
+</body>
+</html>
