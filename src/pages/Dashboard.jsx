@@ -4,7 +4,7 @@ import { TrendingUp, TrendingDown, Wallet, PiggyBank, ArrowUpRight, ArrowDownRig
 import { Link } from 'react-router-dom'
 
 export default function Dashboard() {
-  const recentTransactions = transactions.slice(0, 5)
+  const recentTransactions = [...transactions].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5)
   const topBudgets = budgets.slice(0, 4)
 
   return (
